@@ -1,5 +1,6 @@
--- write a SQL query to explore a question of your choice. This query should:
--- involve at least one condition, using WHERE with AND or OR
+-- write a SQL query to list the ids, titles, and production codes of all episodes.
+-- Order the results by production code, from earliest to latest
+-- results in a table with 3 columns and 140 rows
 
-SELECT topic from episodes
-WHERE topic LIKE "%math%" OR topic LIKE "%money%";
+SELECT id, title, production_code FROM episodes
+ORDER BY production_code ASC;
