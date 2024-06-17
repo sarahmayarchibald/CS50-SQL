@@ -1,5 +1,5 @@
--- find the title of the holiday episode that aired on December 31st, 2004
--- results in a table with 1 column and 1 row
+--  list the titles of episodes from season 6 (2008) that were released early, in 2007
+-- results in a table with 1 column and 2 rows
 
 SELECT title FROM episodes
-WHERE air_date = "2004-12-31";
+WHERE season = 6 AND air_date BETWEEN "2007-01-01" AND "2007-12-31";
