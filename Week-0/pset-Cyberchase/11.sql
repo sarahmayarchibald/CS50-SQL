@@ -1,5 +1,6 @@
--- write a SQL query to explore a question of your choice. This query should:
--- involve at least one condition, using WHERE with AND or OR
+-- list the titles of episodes from season 5, in reverse alphabetical order
+-- results in a table with 1 column and 10 rows
 
-SELECT topic from episodes
-WHERE topic LIKE "%math%" OR topic LIKE "%money%";
+SELECT title FROM episodes
+WHERE season = 5
+ORDER BY title DESC;
