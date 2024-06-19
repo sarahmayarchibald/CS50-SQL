@@ -1,5 +1,7 @@
--- count the number of players who bat (or batted) right-handed and throw (or threw) left-handed, or vice versa
--- results in a table with 1 columns and 1 row
+-- return the first and last names of all right-handed batters.
+-- Sort the results alphabetically by first name, then by last name
+-- results in a table with 2 columns and 12878 row.
 
-SELECT COUNT(id) FROM players
-WHERE (bats = 'R' AND throws = 'L') OR (bats = 'L' AND throws = 'R');
+SELECT first_name, last_name FROM players
+WHERE bats = 'R'
+ORDER BY first_name ASC, last_name ASC;
